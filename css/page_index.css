@@ -1,47 +1,60 @@
-/* ----------------------------------------------------------------
-   ESTILOS ESPECÍFICOS: "index.html"
-------------------------------------------------------------------- */
-
-/* ----------------------------------------------------------------
-   Página Inicio: Carrusel de Tarjetas
-------------------------------------------------------------------- */
-.property-card-carousel {
-    border: none;
+.hero-section {
+    position: relative;
+    min-height: 90vh;
+    overflow: hidden;
 }
 
-.property-card-carousel .card-body {
-    /* Fondo semitransparente sobre la imagen */
+.hero-section .carousel {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    right: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-    color: #fff;
-    padding: 1.5rem;
-    border-bottom-left-radius: var(--bs-border-radius-lg);
-    border-bottom-right-radius: var(--bs-border-radius-lg);
+    width: 100%;
+    height: 100%;
 }
 
-.property-card-carousel .card-title {
-    color: #fff;
-    font-weight: 600;
+.hero-section .carousel-inner {
+    height: 100%;
 }
 
-.property-card-carousel .card-text {
-    color: #E5E7EB;
-    /* Blanco más suave */
-    margin-bottom: 1rem;
+.hero-carousel-image {
+    object-fit: cover;
+    height: 100vh;
+    min-height: 600px;
 }
 
-/* ----------------------------------------------------------------
-     Página Inicio: Tarjeta de Propiedad Destacada
-  ------------------------------------------------------------------- */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 0;
+}
+
+.hero-content .text-white {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .carousel-control-prev,
+.hero-section .carousel-control-next {
+    z-index: 3;
+}
+
 .property-card-featured {
     transition: all 0.3s ease;
     border: 1px solid #e5e7eb;
     border-radius: var(--bs-border-radius-lg, 0.75rem);
     overflow: hidden;
-    /* Para el tag */
     background-color: #fff;
 }
 
@@ -68,7 +81,6 @@
 
 .property-card-featured .property-tag.premium {
     background-color: #059669;
-    /* Un verde */
 }
 
 .property-card-featured .card-body {
@@ -118,10 +130,21 @@
     color: #fff;
 }
 
-/* ----------------------------------------------------------------
-     Página Inicio: Sección "Por Qué Elegirnos"
-  ------------------------------------------------------------------- */
-.feature-icon-wrapper {
+.value-card {
+    border: 1px solid #e5e7eb;
+    border-radius: var(--bs-border-radius-lg, 0.75rem);
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.value-icon-wrapper {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -135,7 +158,7 @@
     transition: all 0.3s ease;
 }
 
-.feature-card:hover .feature-icon-wrapper {
+.value-card:hover .value-icon-wrapper {
     transform: scale(1.1);
     box-shadow: 0 4px 15px rgba(217, 119, 6, 0.2);
 }

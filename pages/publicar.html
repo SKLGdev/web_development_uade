@@ -8,15 +8,17 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Font Awesome (para íconos) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Custom CSS (Ruta corregida para subcarpeta) -->
+    <!-- *** CSS *** -->
+    <!-- 1. Estilos Globales -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- 2. Estilos Específicos de esta página -->
     <link rel="stylesheet" href="../css/page_publicar.css">
 
 </head>
@@ -77,196 +79,201 @@
         </div>
     </nav>
 
-    <!-- ================================================== -->
-    <!--           SECCIÓN 1: CÓMO PUBLICAR (TIMELINE)      -->
-    <!-- ================================================== -->
-    <section class="container my-5 py-5">
-        <!-- Título de la Sección -->
-        <div class="row mb-5">
-            <div class="col-md-8 mx-auto text-center">
-                <h1 class="display-4 fw-bold">Cómo Publicar tu Propiedad</h1>
-                <p class="lead text-muted">Proceso simple y guiado para que tu propiedad esté online en minutos.</p>
-            </div>
-        </div>
-
-        <!-- Pasos (Timeline) -->
-        <div class="row g-4 publication-steps">
-            <!-- Paso 1: Registro -->
-            <div class="col-lg-3 col-md-6">
-                <div class="step-card text-center p-3">
-                    <div class="step-circle">1</div>
-                    <h5 class="fw-bold mt-3">Registro</h5>
-                    <p class="text-muted">Crea tu cuenta en menos de 2 minutos.</p>
-                </div>
-            </div>
-            <!-- Paso 2: Información -->
-            <div class="col-lg-3 col-md-6">
-                <div class="step-card text-center p-3">
-                    <div class="step-circle">2</div>
-                    <h5 class="fw-bold mt-3">Información</h5>
-                    <p class="text-muted">Completa los detalles de tu propiedad.</p>
-                </div>
-            </div>
-            <!-- Paso 3: Fotos -->
-            <div class="col-lg-3 col-md-6">
-                <div class="step-card text-center p-3">
-                    <div class="step-circle">3</div>
-                    <h5 class="fw-bold mt-3">Fotos</h5>
-                    <p class="text-muted">Sube imágenes de alta calidad.</p>
-                </div>
-            </div>
-            <!-- Paso 4: Publicar -->
-            <div class="col-lg-3 col-md-6">
-                <div class="step-card text-center p-3">
-                    <div class="step-circle">4</div>
-                    <h5 class="fw-bold mt-3">Publicar</h5>
-                    <p class="text-muted">Tu propiedad estará online en 24h.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================================================== -->
-    <!--          SECCIÓN 2: HISTORIAS DE ÉXITO             -->
-    <!-- ================================================== -->
-    <section class="container-fluid bg-white py-5">
-        <div class="container">
+    <main>
+        <!-- ================================================== -->
+        <!--           SECCIÓN: CÓMO PUBLICAR (TIMELINE)        -->
+        <!-- ================================================== -->
+        <section class="container my-5 py-5">
             <!-- Título de la Sección -->
             <div class="row mb-5">
                 <div class="col-md-8 mx-auto text-center">
-                    <h2 class="display-5 fw-bold">Historias de Éxito</h2>
-                    <p class="lead text-muted">Descubre cómo otros propietarios han vendido sus propiedades con
-                        nosotros.</p>
+                    <h1 class="display-4 fw-bold">Cómo Publicar tu Propiedad</h1>
+                    <p class="lead text-muted">Proceso simple y guiado para que tu propiedad esté online en minutos.</p>
                 </div>
             </div>
 
-            <!-- Grilla de Testimonios -->
-            <div class="row g-4">
-                <!-- Testimonio 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card testimonial-card">
-                        <div class="card-body">
-                            <div class="testimonial-author mb-3">
-                                <img src="https://placehold.co/100x100/EAEAEA/333333?text=C.R."
-                                    alt="Cliente Carmen Rodríguez">
-                                <div>
-                                    <h6>Carmen Rodríguez</h6>
-                                    <span>Propietaria Individual</span>
+            <!-- Pasos (Timeline) -->
+            <div class="row g-4 publication-steps">
+                <!-- Paso 1: Registro -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card text-center p-3">
+                        <div class="step-circle">1</div>
+                        <h5 class="fw-bold mt-3">Registro</h5>
+                        <p class="text-muted">Crea tu cuenta en menos de 2 minutos.</p>
+                    </div>
+                </div>
+                <!-- Paso 2: Información -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card text-center p-3">
+                        <div class="step-circle">2</div>
+                        <h5 class="fw-bold mt-3">Información</h5>
+                        <p class="text-muted">Completa los detalles de tu propiedad.</p>
+                    </div>
+                </div>
+                <!-- Paso 3: Fotos -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card text-center p-3">
+                        <div class="step-circle">3</div>
+                        <h5 class="fw-bold mt-3">Fotos</h5>
+                        <p class="text-muted">Sube imágenes de alta calidad.</p>
+                    </div>
+                </div>
+                <!-- Paso 4: Publicar -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card text-center p-3">
+                        <div class="step-circle">4</div>
+                        <h5 class="fw-bold mt-3">Publicar</h5>
+                        <p class="text-muted">Tu propiedad estará online en 24h.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================== -->
+        <!--           SECCIÓN: HISTORIAS DE ÉXITO              -->
+        <!-- ================================================== -->
+        <section class="container-fluid bg-white py-5">
+            <div class="container">
+                <!-- Título de la Sección -->
+                <div class="row mb-5">
+                    <div class="col-md-8 mx-auto text-center">
+                        <h2 class="display-5 fw-bold">Historias de Éxito</h2>
+                        <p class="lead text-muted">Descubre cómo otros propietarios han vendido sus propiedades con
+                            nosotros.</p>
+                    </div>
+                </div>
+
+                <!-- Grilla de Testimonios -->
+                <div class="row g-4">
+                    <!-- Testimonio 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card testimonial-card">
+                            <div class="card-body">
+                                <div class="testimonial-author mb-3">
+                                    <img src="https://placehold.co/100x100/EAEAEA/333333?text=C.R."
+                                        alt="Cliente Carmen Rodríguez">
+                                    <div>
+                                        <h6>Carmen Rodríguez</h6>
+                                        <span>Propietaria Individual</span>
+                                    </div>
                                 </div>
+                                <p class="fst-italic text-muted">"Vendí mi apartamento en Madrid en solo 3 semanas. La
+                                    plataforma es muy fácil de usar y recibí muchas consultas."</p>
+                                <ul class="success-list">
+                                    <li><i class="fa-solid fa-circle-check"></i> Vendido en 3 semanas</li>
+                                </ul>
                             </div>
-                            <p class="fst-italic text-muted">"Vendí mi apartamento en Madrid en solo 3 semanas. La
-                                plataforma es muy fácil de usar y recibí muchas consultas."</p>
-                            <ul class="success-list">
-                                <li><i class="fa-solid fa-circle-check"></i> Vendido en 3 semanas</li>
-                            </ul>
+                        </div>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card testimonial-card">
+                            <div class="card-body">
+                                <div class="testimonial-author mb-3">
+                                    <img src="https://placehold.co/100x100/D4D4D4/333333?text=M.F."
+                                        alt="Cliente Miguel Fernández">
+                                    <div>
+                                        <h6>Miguel Fernández</h6>
+                                        <span>Director de Agencia</span>
+                                    </div>
+                                </div>
+                                <p class="fst-italic text-muted">"Hemos aumentado nuestras ventas un 40% desde que
+                                    usamos
+                                    PropiedadesZone. Las herramientas profesionales son excelentes."</p>
+                                <ul class="success-list">
+                                    <li><i class="fa-solid fa-circle-check"></i> +40% en ventas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card testimonial-card">
+                            <div class="card-body">
+                                <div class="testimonial-author mb-3">
+                                    <img src="https://placehold.co/100x100/C0C0C0/333333?text=L.M."
+                                        alt="Cliente Laura Martín">
+                                    <div>
+                                        <h6>Laura Martín</h6>
+                                        <span>Inversora</span>
+                                    </div>
+                                </div>
+                                <p class="fst-italic text-muted">"Las alertas personalizadas me ayudaron a encontrar la
+                                    inversión perfecta en Barcelona. Muy recomendable."</p>
+                                <ul class="success-list">
+                                    <li><i class="fa-solid fa-circle-check"></i> Inversión exitosa</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Testimonio 2 -->
+            </div>
+        </section>
+
+        <!-- ================================================== -->
+        <!--        SECCIÓN 3: ELEGIR PERFIL                    -->
+        <!-- ================================================== -->
+        <section class="container my-5 py-5">
+            <!-- Título de la Sección -->
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold">Elige tu Perfil para Empezar</h2>
+                    <p class="lead text-muted">Selecciona el tipo de cuenta que mejor se adapta a tus necesidades.</p>
+                </div>
+            </div>
+
+            <!-- Tarjetas de Perfil (Re-integradas) -->
+            <div class="row g-4 justify-content-center">
+                <!-- Card Dueño Directo -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card testimonial-card">
+                    <div class="card text-center p-4 h-100 card-hover-effect">
+                        <div class="icon-circle bg-primary-subtle text-primary mb-3">
+                            <i class="fa-solid fa-user-tie fa-xl"></i>
+                        </div>
                         <div class="card-body">
-                            <div class="testimonial-author mb-3">
-                                <img src="https://placehold.co/100x100/D4D4D4/333333?text=M.F."
-                                    alt="Cliente Miguel Fernández">
-                                <div>
-                                    <h6>Miguel Fernández</h6>
-                                    <span>Director de Agencia</span>
-                                </div>
-                            </div>
-                            <p class="fst-italic text-muted">"Hemos aumentado nuestras ventas un 40% desde que usamos
-                                PropiedadesZone. Las herramientas profesionales son excelentes."</p>
-                            <ul class="success-list">
-                                <li><i class="fa-solid fa-circle-check"></i> +40% en ventas</li>
-                            </ul>
+                            <h5 class="card-title fw-bold">Particular / Dueño Directo</h5>
+                            <p class="card-text text-muted">Publica tu propiedad de forma rápida y sencilla. Gestiona
+                                tus
+                                anuncios y contactos sin intermediarios.</p>
+                            <a href="#" class="btn btn-primary mt-3">Crear Cuenta Particular</a>
                         </div>
                     </div>
                 </div>
-                <!-- Testimonio 3 -->
+
+                <!-- Card Inmobiliaria -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card testimonial-card">
+                    <div class="card text-center p-4 h-100 card-hover-effect">
+                        <div class="icon-circle bg-primary-subtle text-primary mb-3">
+                            <i class="fa-solid fa-building fa-xl"></i>
+                        </div>
                         <div class="card-body">
-                            <div class="testimonial-author mb-3">
-                                <img src="https://placehold.co/100x100/C0C0C0/333333?text=L.M."
-                                    alt="Cliente Laura Martín">
-                                <div>
-                                    <h6>Laura Martín</h6>
-                                    <span>Inversora</span>
-                                </div>
-                            </div>
-                            <p class="fst-italic text-muted">"Las alertas personalizadas me ayudaron a encontrar la
-                                inversión perfecta en Barcelona. Muy recomendable."</p>
-                            <ul class="success-list">
-                                <li><i class="fa-solid fa-circle-check"></i> Inversión exitosa</li>
-                            </ul>
+                            <h5 class="card-title fw-bold">Inmobiliaria</h5>
+                            <p class="card-text text-muted">Accede a nuestro panel para agencias, gestiona múltiples
+                                propiedades y destaca tus anuncios.</p>
+                            <a href="#" class="btn btn-primary mt-3">Registrar Agencia</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Cliente Comprador -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card text-center p-4 h-100 card-hover-effect">
+                        <div class="icon-circle bg-primary-subtle text-primary mb-3">
+                            <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cliente Comprador</h5>
+                            <p class="card-text text-muted">¿Buscas propiedades? Regístrate gratis, guarda tus
+                                búsquedas,
+                                recibe alertas y contacta propietarios.</p>
+                            <a href="#" class="btn btn-primary mt-3">Buscar Propiedades</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ================================================== -->
-    <!--        SECCIÓN 3: ELEGIR PERFIL (CALL TO ACTION)     -->
-    <!-- ================================================== -->
-    <section class="container my-5 py-5">
-        <!-- Título de la Sección -->
-        <div class="row mb-5">
-            <div class="col-md-8 mx-auto text-center">
-                <h2 class="display-5 fw-bold">Elige tu Perfil para Empezar</h2>
-                <p class="lead text-muted">Selecciona el tipo de cuenta que mejor se adapta a tus necesidades.</p>
-            </div>
-        </div>
-
-        <!-- Tarjetas de Perfil (Re-integradas) -->
-        <div class="row g-4 justify-content-center">
-            <!-- Card Dueño Directo -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card text-center p-4 h-100 card-hover-effect">
-                    <div class="icon-circle bg-primary-subtle text-primary mb-3">
-                        <i class="fa-solid fa-user-tie fa-xl"></i>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Particular / Dueño Directo</h5>
-                        <p class="card-text text-muted">Publica tu propiedad de forma rápida y sencilla. Gestiona tus
-                            anuncios y contactos sin intermediarios.</p>
-                        <a href="#" class="btn btn-primary mt-3">Crear Cuenta Particular</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card Inmobiliaria -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card text-center p-4 h-100 card-hover-effect">
-                    <div class="icon-circle bg-primary-subtle text-primary mb-3">
-                        <i class="fa-solid fa-building fa-xl"></i>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Inmobiliaria</h5>
-                        <p class="card-text text-muted">Accede a nuestro panel para agencias, gestiona múltiples
-                            propiedades y destaca tus anuncios.</p>
-                        <a href="#" class="btn btn-primary mt-3">Registrar Agencia</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card Cliente Comprador -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card text-center p-4 h-100 card-hover-effect">
-                    <div class="icon-circle bg-primary-subtle text-primary mb-3">
-                        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Cliente Comprador</h5>
-                        <p class="card-text text-muted">¿Buscas propiedades? Regístrate gratis, guarda tus búsquedas,
-                            recibe alertas y contacta propietarios.</p>
-                        <a href="#" class="btn btn-primary mt-3">Buscar Propiedades</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    </main>
 
     <!-- ================================================== -->
     <!--                      FOOTER                        -->
@@ -327,7 +334,7 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
 

@@ -8,17 +8,17 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Font Awesome (para íconos) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- *** CSS *** -->
     <!-- 1. Estilos Globales -->
     <link rel="stylesheet" href="../css/style.css">
-    <!-- 2. Estilos Específicos de esta página (ACTUALIZADO) -->
+    <!-- 2. Estilos Específicos de esta página -->
     <link rel="stylesheet" href="../css/page_propiedades.css">
 
 </head>
@@ -55,7 +55,8 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="../pages/propiedades.html#zona-norte">Buenos Aires (Zona
                                     Norte)</a></li>
-                            <li><a class="dropdown-item" href="../pages/propiedades.html#zona-sur">Buenos Aires (Zona Sur)</a>
+                            <li><a class="dropdown-item" href="../pages/propiedades.html#zona-sur">Buenos Aires (Zona
+                                    Sur)</a>
                             </li>
                             <li><a class="dropdown-item" href="../pages/propiedades.html#costa">Costa Atlántica</a></li>
                             <li>
@@ -79,205 +80,207 @@
         </div>
     </nav>
 
-    <!-- ================================================== -->
-    <!--                 BARRA DE BÚSQUEDA                  -->
-    <!-- ================================================== -->
-    <section class="container-fluid property-search-header py-4 bg-white shadow-sm">
-        <div class="container">
-            <form class="row g-3 align-items-center">
-                <div class="col-xl-3 col-lg-6">
-                    <label for="searchUbicacion" class="visually-hidden">Ubicación</label>
-                    <input type="text" class="form-control form-control-lg" id="searchUbicacion"
-                        placeholder="Ciudad, Barrio o Zona">
-                </div>
-                <div class="col-xl-3 col-lg-6">
-                    <label for="searchTipoProp" class="visually-hidden">Tipo de Propiedad</label>
-                    <select class="form-select form-select-lg" id="searchTipoProp">
-                        <option selected disabled value="">Tipo de Propiedad</option>
-                        <option value="1">Apartamento</option>
-                        <option value="2">Casa</option>
-                        <option value="3">Local Comercial</option>
-                        <option value="4">Terreno</option>
-                    </select>
-                </div>
-                <div class="col-xl-3 col-lg-6">
-                    <label for="searchOperacion" class="visually-hidden">Operación</label>
-                    <select class="form-select form-select-lg" id="searchOperacion">
-                        <option selected disabled value="">Operación</option>
-                        <option value="1">Comprar</option>
-                        <option value="2">Alquilar</option>
-                    </select>
-                </div>
-                <div class="col-xl-3 col-lg-6 d-grid">
-                    <button type="submit" class="btn btn-primary btn-lg">
-                        <i class="fa-solid fa-magnifying-glass me-2"></i>Buscar
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!-- ================================================== -->
-    <!--               GRILLA DE PROPIEDADES                -->
-    <!-- ================================================== -->
-    <section class="container my-5 py-5">
-
-        <!-- Título de Sección -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <h2 class="display-5 fw-bold" id="zona-norte">Propiedades Encontradas</h2>
-                <p class="text-muted">Mostrando 9 de 138 resultados</p>
+    <main>
+        <!-- ================================================== -->
+        <!--                 BARRA DE BÚSQUEDA                  -->
+        <!-- ================================================== -->
+        <section class="container-fluid property-search-header py-4 bg-white shadow-sm">
+            <div class="container">
+                <form class="row g-3 align-items-center">
+                    <div class="col-xl-3 col-lg-6">
+                        <label for="searchUbicacion" class="visually-hidden">Ubicación</label>
+                        <input type="text" class="form-control form-control-lg" id="searchUbicacion"
+                            placeholder="Ciudad, Barrio o Zona">
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <label for="searchTipoProp" class="visually-hidden">Tipo de Propiedad</label>
+                        <select class="form-select form-select-lg" id="searchTipoProp">
+                            <option selected disabled value="">Tipo de Propiedad</option>
+                            <option value="1">Apartamento</option>
+                            <option value="2">Casa</option>
+                            <option value="3">Local Comercial</option>
+                            <option value="4">Terreno</option>
+                        </select>
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <label for="searchOperacion" class="visually-hidden">Operación</label>
+                        <select class="form-select form-select-lg" id="searchOperacion">
+                            <option selected disabled value="">Operación</option>
+                            <option value="1">Comprar</option>
+                            <option value="2">Alquilar</option>
+                        </select>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fa-solid fa-magnifying-glass me-2"></i>Buscar
+                        </button>
+                    </div>
+                </form>
             </div>
-        </div>
-
-        <div class="row g-4">
-            <!-- Tarjeta 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card property-grid-card h-100">
-                    <img src="https://placehold.co/600x400/FEF3C7/D97706?text=Casa+en+Nordelta" class="card-img-top"
-                        alt="Casa en Nordelta">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Casa Moderna en Nordelta</h5>
-                        <p class="card-text text-muted small mb-2">Buenos Aires, Argentina</p>
-                        <h4 class="fw-bold text-primary mb-3">USD 550,000</h4>
-                        <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
-                            <span><i class="fa-solid fa-bed me-1"></i> 4 habs</span>
-                            <span><i class="fa-solid fa-bath me-1"></i> 3 baños</span>
-                            <span><i class="fa-solid fa-ruler-combined me-1"></i> 280 m²</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card property-grid-card h-100">
-                    <img src="https://placehold.co/600x400/FEF3C7/D97706?text=Depto+en+Palermo" class="card-img-top"
-                        alt="Depto en Palermo">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Depto 2 Ambientes en Palermo</h5>
-                        <p class="card-text text-muted small mb-2">CABA, Argentina</p>
-                        <h4 class="fw-bold text-primary mb-3">USD 120,000</h4>
-                        <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
-                            <span><i class="fa-solid fa-bed me-1"></i> 2 habs</span>
-                            <span><i class="fa-solid fa-bath me-1"></i> 1 baño</span>
-                            <span><i class="fa-solid fa-ruler-combined me-1"></i> 55 m²</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card property-grid-card h-100">
-                    <img src="https://placehold.co/600x400/FEF3C7/D97706?text=Chalet+Mar+del+Plata" class="card-img-top"
-                        alt="Chalet en Mar del Plata">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Chalet en Mar del Plata</h5>
-                        <p class="card-text text-muted small mb-2">Buenos Aires, Argentina</p>
-                        <h4 class="fw-bold text-primary mb-3">USD 210,000</h4>
-                        <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
-                            <span><i class="fa-solid fa-bed me-1"></i> 5 habs</span>
-                            <span><i class="fa-solid fa-bath me-1"></i> 3 baños</span>
-                            <span><i class="fa-solid fa-ruler-combined me-1"></i> 190 m²</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta 4 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card property-grid-card h-100">
-                    <img src="https://placehold.co/600x400/FEF3C7/D97706?text=PH+en+Vicente+Lopez" class="card-img-top"
-                        alt="PH en Vicente Lopez">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">PH en Vicente López</h5>
-                        <p class="card-text text-muted small mb-2">Buenos Aires, Argentina</p>
-                        <h4 class="fw-bold text-primary mb-3">USD 180,000</h4>
-                        <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
-                            <span><i class="fa-solid fa-bed me-1"></i> 3 habs</span>
-                            <span><i class="fa-solid fa-bath me-1"></i> 2 baños</span>
-                            <span><i class="fa-solid fa-ruler-combined me-1"></i> 95 m²</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta 5 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card property-grid-card h-100">
-                    <img src="https://placehold.co/600x400/FEF3C7/D97706?text=Casa+en+Córdoba" class="card-img-top"
-                        alt="Casa en Córdoba">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Casa con Piscina en Córdoba</h5>
-                        <p class="card-text text-muted small mb-2">Córdoba, Argentina</p>
-                        <h4 class="fw-bold text-primary mb-3">USD 320,000</h4>
-                        <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
-                            <span><i class="fa-solid fa-bed me-1"></i> 4 habs</span>
-                            <span><i class="fa-solid fa-bath me-1"></i> 4 baños</span>
-                            <span><i class="fa-solid fa-ruler-combined me-1"></i> 350 m²</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta 6 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card property-grid-card h-100">
-                    <img src="https://placehold.co/600x400/FEF3C7/D97706?text=Depto+en+Bariloche" class="card-img-top"
-                        alt="Depto en Bariloche">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Depto con Vista al Lago</h5>
-                        <p class="card-text text-muted small mb-2">Bariloche, Argentina</p>
-                        <h4 class="fw-bold text-primary mb-3">USD 250,000</h4>
-                        <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
-                            <span><i class="fa-solid fa-bed me-1"></i> 2 habs</span>
-                            <span><i class="fa-solid fa-bath me-1"></i> 2 baños</span>
-                            <span><i class="fa-solid fa-ruler-combined me-1"></i> 80 m²</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-
-        </div> <!-- .row -->
+        </section>
 
         <!-- ================================================== -->
-        <!--                      PAGINACIÓN                    -->
+        <!--               GRILLA DE PROPIEDADES                -->
         <!-- ================================================== -->
-        <nav aria-label="Navegación de propiedades" class="mt-5 pt-4">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                </li>
-                <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Siguiente</a>
-                </li>
-            </ul>
-        </nav>
+        <section class="container my-5 py-5">
 
-    </section>
+            <!-- Título de Sección -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold" id="zona-norte">Propiedades Encontradas</h2>
+                    <p class="text-muted">Mostrando 9 de 138 resultados</p>
+                </div>
+            </div>
 
+            <div class="row g-4">
+                <!-- Tarjeta 1 -->
+                <article class="col-lg-4 col-md-6">
+                    <div class="card property-grid-card h-100">
+                        <img src="../img/departamento_moderno.jpg" class="card-img-top"
+                            alt="Casa en Nordelta">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Casa Moderna en Nordelta</h5>
+                            <p class="card-text text-muted small mb-2">Buenos Aires, Argentina</p>
+                            <h4 class="fw-bold text-primary mb-3">USD 550,000</h4>
+                            <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
+                                <span><i class="fa-solid fa-bed me-1"></i> 4 habs</span>
+                                <span><i class="fa-solid fa-bath me-1"></i> 3 baños</span>
+                                <span><i class="fa-solid fa-ruler-combined me-1"></i> 280 m²</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="col-lg-4 col-md-6">
+                    <div class="card property-grid-card h-100">
+                        <img src="../img/edificio_departamentos.jpg" class="card-img-top"
+                            alt="Edificio de departamentos">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Edificio de departamentos</h5>
+                            <p class="card-text text-muted small mb-2">CABA, Argentina</p>
+                            <h4 class="fw-bold text-primary mb-3">USD 120,000</h4>
+                            <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
+                                <span><i class="fa-solid fa-bed me-1"></i> 2 habs</span>
+                                <span><i class="fa-solid fa-bath me-1"></i> 1 baño</span>
+                                <span><i class="fa-solid fa-ruler-combined me-1"></i> 55 m²</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="col-lg-4 col-md-6">
+                    <div class="card property-grid-card h-100">
+                        <img src="../img/chalet_mar_del_plata.jpg"
+                            class="card-img-top" alt="Chalet en la playa">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Chalet en la playa</h5>
+                            <p class="card-text text-muted small mb-2">Buenos Aires, Argentina</p>
+                            <h4 class="fw-bold text-primary mb-3">USD 210,000</h4>
+                            <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
+                                <span><i class="fa-solid fa-bed me-1"></i> 5 habs</span>
+                                <span><i class="fa-solid fa-bath me-1"></i> 3 baños</span>
+                                <span><i class="fa-solid fa-ruler-combined me-1"></i> 190 m²</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4 -->
+                <article class="col-lg-4 col-md-6">
+                    <div class="card property-grid-card h-100">
+                        <img src="../img/departamento_palermo.jpg"
+                            class="card-img-top" alt="Departamento en Palermo">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Departamento en Palermo</h5>
+                            <p class="card-text text-muted small mb-2">Buenos Aires, Argentina</p>
+                            <h4 class="fw-bold text-primary mb-3">USD 180,000</h4>
+                            <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
+                                <span><i class="fa-solid fa-bed me-1"></i> 3 habs</span>
+                                <span><i class="fa-solid fa-bath me-1"></i> 2 baños</span>
+                                <span><i class="fa-solid fa-ruler-combined me-1"></i> 95 m²</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 5 -->
+                <article class="col-lg-4 col-md-6">
+                    <div class="card property-grid-card h-100">
+                            <img src="../img/casa_playa.jpg" class="card-img-top"
+                            alt="Casa en la playa">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Casa en la playa</h5>
+                            <p class="card-text text-muted small mb-2">Córdoba, Argentina</p>
+                            <h4 class="fw-bold text-primary mb-3">USD 320,000</h4>
+                            <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
+                                <span><i class="fa-solid fa-bed me-1"></i> 4 habs</span>
+                                <span><i class="fa-solid fa-bath me-1"></i> 4 baños</span>
+                                <span><i class="fa-solid fa-ruler-combined me-1"></i> 350 m²</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 6 -->
+                <article class="col-lg-4 col-md-6">
+                    <div class="card property-grid-card h-100">
+                        <img src="../img/casa_moderna.jpg"
+                            class="card-img-top" alt="Casa moderna">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Casa moderna</h5>
+                            <p class="card-text text-muted small mb-2">Río Negro, Argentina</p>
+                            <h4 class="fw-bold text-primary mb-3">USD 250,000</h4>
+                            <div class="d-flex justify-content-start gap-3 text-muted border-top pt-3">
+                                <span><i class="fa-solid fa-bed me-1"></i> 2 habs</span>
+                                <span><i class="fa-solid fa-bath me-1"></i> 2 baños</span>
+                                <span><i class="fa-solid fa-ruler-combined me-1"></i> 80 m²</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div> <!-- .row -->
+
+            <!-- ================================================== -->
+            <!--                      PAGINACIÓN                    -->
+            <!-- ================================================== -->
+            <nav aria-label="Navegación de propiedades" class="mt-5 pt-4">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                    </li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Siguiente</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </section>
+
+    </main>
 
     <!-- ================================================== -->
     <!--                      FOOTER                        -->
@@ -338,7 +341,7 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
 

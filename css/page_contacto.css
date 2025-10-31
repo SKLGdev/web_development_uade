@@ -1,12 +1,4 @@
-/* ----------------------------------------------------------------
-   ESTILOS ESPECÍFICOS: "contacto.html"
-------------------------------------------------------------------- */
-
-/* ----------------------------------------------------------------
-   Sección 1: Header y Tarjetas de Contacto
-------------------------------------------------------------------- */
 .contact-header {
-    /* Fondo con un degradado sutil */
     background: linear-gradient(180deg, #ffffff 0%, var(--bs-body-bg) 100%);
 }
 
@@ -53,45 +45,32 @@
     color: #fff;
 }
 
-/* ----------------------------------------------------------------
-     Sección 2: Pestañas (Tabs) del Formulario
-  ------------------------------------------------------------------- */
 .contact-tabs {
     border-bottom: 2px solid #e5e7eb;
     justify-content: center;
-    /* Centra las pestañas */
     flex-wrap: nowrap;
     overflow-x: auto;
-    /* Permite scroll horizontal en móviles */
     overflow-y: hidden;
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
 }
 
 .contact-tabs::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera */
 }
-
 
 .contact-tabs .nav-link {
     border: none;
     border-bottom: 2px solid transparent;
     color: #6b7280;
-    /* Color inactivo */
     font-weight: 500;
     padding: 0.75rem 1.25rem;
     margin-bottom: -2px;
-    /* Alinea con el borde inferior */
     white-space: nowrap;
-    /* Evita que el texto se rompa */
 }
 
 .contact-tabs .nav-link:hover {
     border-bottom-color: #d1d5db;
-    /* Gris claro en hover */
     color: #374151;
 }
 
@@ -101,17 +80,12 @@
     font-weight: 600;
 }
 
-/* ----------------------------------------------------------------
-     Sección 3: Acordeón de FAQ
-  ------------------------------------------------------------------- */
 .faq-accordion .accordion-item {
     background-color: #fff;
     border: 1px solid #e5e7eb;
     border-radius: var(--bs-border-radius-lg, 0.75rem) !important;
     margin-bottom: 1rem;
-    /* Espacio entre preguntas */
     overflow: hidden;
-    /* Para que el borde redondeado funcione */
 }
 
 .faq-accordion .accordion-button {
@@ -132,15 +106,11 @@
     border-color: rgba(0, 0, 0, .125);
 }
 
-/* Ícono del acordeón (flecha) */
 .faq-accordion .accordion-button::after {
-    /* Reemplaza la flecha de Bootstrap por una de Font Awesome */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: "\f078";
-    /* fa-chevron-down */
     background-image: none;
-    /* Elimina la imagen SVG de Bootstrap */
     transform: rotate(0deg);
     transition: transform 0.2s ease-in-out;
 }

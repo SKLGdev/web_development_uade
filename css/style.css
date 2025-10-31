@@ -1,35 +1,16 @@
-/* ----------------------------------------------------------------
-   ESTILOS GLOBALES (Se carga en TODAS las páginas)
-------------------------------------------------------------------- */
-
-/* ----------------------------------------------------------------
-   Variables de Color
-------------------------------------------------------------------- */
 :root {
     --bs-primary: #D97706;
-    /* Naranja/marrón principal */
     --bs-primary-rgb: 217, 119, 6;
     --bs-primary-subtle: #FEF3C7;
-    /* Un amarillo/crema muy claro para fondos */
-
     --bs-body-bg: #F9FAFB;
-    /* Fondo general muy claro */
     --bs-body-color: #374151;
-    /* Color de texto principal (gris oscuro) */
-
-    /* Sobreescribir colores de Bootstrap */
     --bs-link-color: #D97706;
     --bs-link-hover-color: #B45309;
-
     --bs-border-radius: 0.5rem;
-    /* Bordes redondeados más pronunciados */
     --bs-border-radius-lg: 0.75rem;
     --bs-border-radius-sm: 0.25rem;
 }
 
-/* ----------------------------------------------------------------
-     Estilos Globales y Botones
-  ------------------------------------------------------------------- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background-color: var(--bs-body-bg);
@@ -41,7 +22,6 @@ body {
     --bs-btn-border-color: var(--bs-primary);
     --bs-btn-hover-color: #ffffff;
     --bs-btn-hover-bg: #B45309;
-    /* Un naranja más oscuro */
     --bs-btn-hover-border-color: #92400E;
     --bs-btn-active-bg: #92400E;
     --bs-btn-active-border-color: #78350F;
@@ -58,24 +38,18 @@ body {
     background-color: var(--bs-primary-subtle) !important;
 }
 
-/* ----------------------------------------------------------------
-     Navbar (Global)
-  ------------------------------------------------------------------- */
 .navbar {
     border-bottom: 1px solid #E5E7EB;
-    /* Borde inferior sutil */
 }
 
 .navbar-brand {
     font-size: 1.5rem;
-    /* Más grande */
     color: var(--bs-body-color);
 }
 
 .navbar .nav-link {
     font-weight: 500;
     color: #4B5563;
-    /* Gris intermedio */
     transition: color 0.2s;
 }
 
@@ -98,19 +72,12 @@ body {
     color: #fff;
 }
 
-/* ----------------------------------------------------------------
-     Formularios (Global, para Contacto)
-  ------------------------------------------------------------------- */
 .form-control:focus,
 .form-select:focus {
     border-color: var(--bs-primary);
     box-shadow: 0 0 0 0.25rem rgba(217, 119, 6, 0.25);
 }
 
-/* ----------------------------------------------------------------
-     Componente Reutilizable: Tarjeta Testimonio
-     (Usado en Index y Publicar)
-  ------------------------------------------------------------------- */
 .testimonial-card {
     border: 1px solid #e5e7eb;
     border-radius: var(--bs-border-radius-lg, 0.75rem);
@@ -124,7 +91,6 @@ body {
 
 .testimonial-stars {
     color: #F59E0B;
-    /* Amarillo/naranja */
     margin-bottom: 1rem;
 }
 
@@ -151,9 +117,6 @@ body {
     color: #6b7280;
 }
 
-/* ----------------------------------------------------------------
-     Componente Reutilizable: Hover de Tarjeta
-  ------------------------------------------------------------------- */
 .card-hover-effect {
     transition: all 0.3s ease-in-out;
 }
@@ -164,73 +127,48 @@ body {
     border-color: var(--bs-primary) !important;
 }
 
-/* ----------------------------------------------------------------
-     Footer (Global)
-  ------------------------------------------------------------------- */
-.social-icons-container {
-    /* Contenedor para los íconos */
-}
-
 .social-icon-wrapper {
     display: flex;
     align-items: center;
     background-color: #4B5563;
-    /* Fondo del ícono */
     border-radius: 50px;
-    /* Píldora */
     padding: 0.5rem;
-    /* 8px */
     text-decoration: none;
     color: #fff;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
-    /* Clave para la animación */
 }
 
-/* El ícono en sí */
 .social-icon-wrapper .social-icon {
     width: 32px;
-    /* Ancho fijo para el ícono */
     height: 32px;
-    /* Alto fijo */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    /* Evita que el ícono se encoja */
     font-size: 1.1rem;
 }
 
-/* El texto oculto */
 .social-icon-wrapper .social-text {
-    /* Oculto por defecto */
     max-width: 0;
     opacity: 0;
     padding-left: 0;
     white-space: nowrap;
-    /* Evita que el texto se rompa */
     transition: all 0.4s ease-in-out;
     font-weight: 500;
 }
 
-/* El HOVER (La magia) */
 .social-icon-wrapper:hover {
     background-color: var(--bs-primary);
-    /* Cambia a color primario */
     padding-right: 1rem;
-    /* Añade padding para el texto */
 }
 
 .social-icon-wrapper:hover .social-text {
-    /* Se expande al hacer hover */
     max-width: 100px;
-    /* Ancho máximo para el texto */
     opacity: 1;
     padding-left: 0.5rem;
-    /* Espacio entre ícono y texto */
 }
 
-/* Color especial para WhatsApp */
 .social-icon-wrapper.whatsapp:hover {
     background-color: #25D366;
 }
