@@ -1,0 +1,150 @@
+/* ----------------------------------------------------------------
+   ESTILOS ESPECÍFICOS: "contacto.html"
+------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------
+   Sección 1: Header y Tarjetas de Contacto
+------------------------------------------------------------------- */
+.contact-header {
+    /* Fondo con un degradado sutil */
+    background: linear-gradient(180deg, #ffffff 0%, var(--bs-body-bg) 100%);
+}
+
+.contact-card {
+    border: 1px solid #e5e7eb;
+    border-radius: var(--bs-border-radius-lg, 0.75rem);
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.contact-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--bs-primary-subtle, #FEF3C7);
+    color: var(--bs-primary, #D97706);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.75rem;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.2);
+}
+
+.contact-card .btn-outline-primary {
+    border-color: var(--bs-primary, #D97706);
+    color: var(--bs-primary, #D97706);
+}
+
+.contact-card .btn-outline-primary:hover {
+    background-color: var(--bs-primary, #D97706);
+    color: #fff;
+}
+
+/* ----------------------------------------------------------------
+     Sección 2: Pestañas (Tabs) del Formulario
+  ------------------------------------------------------------------- */
+.contact-tabs {
+    border-bottom: 2px solid #e5e7eb;
+    justify-content: center;
+    /* Centra las pestañas */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    /* Permite scroll horizontal en móviles */
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.contact-tabs::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+
+.contact-tabs .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #6b7280;
+    /* Color inactivo */
+    font-weight: 500;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -2px;
+    /* Alinea con el borde inferior */
+    white-space: nowrap;
+    /* Evita que el texto se rompa */
+}
+
+.contact-tabs .nav-link:hover {
+    border-bottom-color: #d1d5db;
+    /* Gris claro en hover */
+    color: #374151;
+}
+
+.contact-tabs .nav-link.active {
+    border-bottom-color: var(--bs-primary, #D97706);
+    color: var(--bs-primary, #D97706);
+    font-weight: 600;
+}
+
+/* ----------------------------------------------------------------
+     Sección 3: Acordeón de FAQ
+  ------------------------------------------------------------------- */
+.faq-accordion .accordion-item {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--bs-border-radius-lg, 0.75rem) !important;
+    margin-bottom: 1rem;
+    /* Espacio entre preguntas */
+    overflow: hidden;
+    /* Para que el borde redondeado funcione */
+}
+
+.faq-accordion .accordion-button {
+    font-weight: 600;
+    color: var(--bs-body-color);
+    background-color: #fff;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    color: var(--bs-primary, #D97706);
+    background-color: var(--bs-primary-subtle, #FEF3C7);
+    box-shadow: none;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, .125);
+}
+
+/* Ícono del acordeón (flecha) */
+.faq-accordion .accordion-button::after {
+    /* Reemplaza la flecha de Bootstrap por una de Font Awesome */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f078";
+    /* fa-chevron-down */
+    background-image: none;
+    /* Elimina la imagen SVG de Bootstrap */
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+}

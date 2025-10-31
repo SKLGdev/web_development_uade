@@ -1,0 +1,72 @@
+/* ----------------------------------------------------------------
+   ESTILOS ESPECÍFICOS: "publicar.html"
+------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------
+   Página Publicar: Tarjetas de Perfil
+------------------------------------------------------------------- */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* ----------------------------------------------------------------
+     Página Publicar: Timeline (Pasos)
+  ------------------------------------------------------------------- */
+.publication-steps .step-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--bs-primary, #D97706);
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    border: 4px solid var(--bs-primary-subtle, #FEF3C7);
+    transition: all 0.3s ease;
+}
+
+.publication-steps .step-card {
+    transition: all 0.3s ease;
+}
+
+.publication-steps .step-card:hover {
+    transform: translateY(-5px);
+}
+
+.publication-steps .step-card:hover .step-circle {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+}
+
+/* ----------------------------------------------------------------
+     Página Publicar: Lista de "Éxitos" en testimonios
+  ------------------------------------------------------------------- */
+.testimonial-card .success-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.testimonial-card .success-list li {
+    display: flex;
+    align-items: center;
+    color: #166534;
+    /* Verde oscuro */
+    font-weight: 500;
+}
+
+.testimonial-card .success-list .fa-circle-check {
+    color: #22C55E;
+    /* Verde brillante */
+    margin-right: 0.5rem;
+}

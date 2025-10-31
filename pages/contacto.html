@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-t">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PropiedadesZone - Contacto</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome (para íconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- *** CSS *** -->
+    <!-- 1. Estilos Globales -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 2. Estilos Específicos de esta página (NUEVO) -->
+    <link rel="stylesheet" href="../css/page_contacto.css">
+
+</head>
+
+<body class="bg-light-subtle">
+
+    <!-- ================================================== -->
+    <!--                      NAVBAR                        -->
+    <!-- ================================================== -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fa-solid fa-house-chimney text-primary"></i>
+                Propiedades<span class="text-primary">Zone</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/propiedades.html">Propiedades</a>
+                    </li>
+                    <!-- Filtro por Zona/Provincia -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Filtrar por Zona
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../pages/propiedades.html#zona-norte">Buenos Aires (Zona
+                                    Norte)</a></li>
+                            <li><a class="dropdown-item" href="../pages/propiedades.html#zona-sur">Buenos Aires (Zona
+                                    Sur)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="../pages/propiedades.html#costa">Costa Atlántica</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="../pages/propiedades.html#cordoba">Córdoba</a></li>
+                            <li><a class="dropdown-item" href="../pages/propiedades.html#patagonia">Patagonia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/publicar.html">Publicar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================================================== -->
+    <!--           SECCIÓN 1: HEADER Y TARJETAS             -->
+    <!-- ================================================== -->
+    <section class="container-fluid contact-header py-5">
+        <div class="container">
+            <!-- Título -->
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold">Estamos Aquí Para <span class="text-primary">Ayudarte</span></h1>
+                    <p class="lead text-muted">Múltiples canales de comunicación para resolver todas tus consultas sobre
+                        propiedades y servicios inmobiliarios.</p>
+                </div>
+            </div>
+
+            <!-- Tarjetas de Contacto -->
+            <div class="row g-4">
+                <!-- Card Llámanos -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card contact-card h-100">
+                        <div class="contact-icon-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h5 class="fw-bold">Llámanos</h5>
+                        <p class="text-muted">Respuesta inmediata</p>
+                        <a href="tel:+34900123456" class="text-decoration-none fw-500 fs-5">+34 900 123 456</a>
+                    </div>
+                </div>
+                <!-- Card Escríbenos -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card contact-card h-100">
+                        <div class="contact-icon-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h5 class="fw-bold">Escríbenos</h5>
+                        <p class="text-muted">Respuesta en 24h</p>
+                        <a href="mailto:info@propiedadeszone.com"
+                            class="text-decoration-none fw-500 fs-5">info@propiedadeszone.com</a>
+                    </div>
+                </div>
+                <!-- Card Chat en Vivo -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card contact-card h-100">
+                        <div class="contact-icon-wrapper">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <h5 class="fw-bold">Chat en Vivo</h5>
+                        <p class="text-muted">Asistencia inmediata</p>
+                        <a href="#" class="btn btn-outline-primary mt-2">Iniciar Chat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!--           SECCIÓN 2: FORMULARIOS (TABS)            -->
+    <!-- ================================================== -->
+    <section class="container my-5 py-5">
+        <!-- Título -->
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold">¿En Qué Podemos Ayudarte?</h2>
+                <p class="lead text-muted">Selecciona el tipo de consulta que mejor se adapte a tus necesidades.</p>
+            </div>
+        </div>
+
+        <!-- Contenedor de Tabs -->
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <!-- Navegación de Pestañas (Tabs) -->
+                <ul class="nav nav-tabs contact-tabs mb-4" id="contactFormTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="general-tab" data-bs-toggle="tab"
+                            data-bs-target="#general-tab-pane" type="button" role="tab" aria-controls="general-tab-pane"
+                            aria-selected="true">Consulta General</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="propiedad-tab" data-bs-toggle="tab"
+                            data-bs-target="#propiedad-tab-pane" type="button" role="tab"
+                            aria-controls="propiedad-tab-pane" aria-selected="false">Consulta de Propiedad</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="publicar-tab" data-bs-toggle="tab"
+                            data-bs-target="#publicar-tab-pane" type="button" role="tab"
+                            aria-controls="publicar-tab-pane" aria-selected="false">Publicar Propiedad</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="colab-tab" data-bs-toggle="tab" data-bs-target="#colab-tab-pane"
+                            type="button" role="tab" aria-controls="colab-tab-pane"
+                            aria-selected="false">Colaboraciones</button>
+                    </li>
+                </ul>
+
+                <!-- Contenido de las Pestañas -->
+                <div class="tab-content bg-white p-4 p-md-5 rounded-3 shadow-lg" id="contactFormTabsContent">
+
+                    <!-- Pestaña 1: Consulta General -->
+                    <div class="tab-pane fade show active" id="general-tab-pane" role="tabpanel"
+                        aria-labelledby="general-tab" tabindex="0">
+                        <form action="#" method="POST" class="row g-3">
+                            <div class="col-md-6">
+                                <label for="general-name" class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-control" id="general-name"
+                                    placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="general-email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="general-email" placeholder="tu@email.com"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="general-phone" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="general-phone" placeholder="+34 600 000 000">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="general-asunto" class="form-label">Asunto *</label>
+                                <select id="general-asunto" class="form-select" required>
+                                    <option value="" selected disabled>Seleccionar asunto</option>
+                                    <option value="info">Solicitar Información</option>
+                                    <option value="soporte">Soporte Técnico</option>
+                                    <option value="facturacion">Facturación</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="general-mensaje" class="form-label">Mensaje *</label>
+                                <textarea class="form-control" id="general-mensaje" rows="5"
+                                    placeholder="Describe tu consulta en detalle..." required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="general-politica" required>
+                                    <label class="form-check-label" for="general-politica">
+                                        Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos
+                                        personales.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fa-solid fa-paper-plane me-2"></i> Enviar Mensaje
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Pestaña 2: Consulta de Propiedad -->
+                    <div class="tab-pane fade" id="propiedad-tab-pane" role="tabpanel" aria-labelledby="propiedad-tab"
+                        tabindex="0">
+                        <form action="#" method="POST" class="row g-3">
+                            <div class="col-md-6">
+                                <label for="prop-name" class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-control" id="prop-name" placeholder="Tu nombre completo"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="prop-email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="prop-email" placeholder="tu@email.com"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="prop-phone" class="form-label">Teléfono *</label>
+                                <input type="tel" class="form-control" id="prop-phone" placeholder="+34 600 000 000"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="prop-tipo" class="form-label">Tipo de Propiedad</label>
+                                <select id="prop-tipo" class="form-select">
+                                    <option value="" selected disabled>Seleccionar tipo</option>
+                                    <option value="apartamento">Apartamento</option>
+                                    <option value="casa">Casa / Chalet</option>
+                                    <option value="local">Local Comercial</option>
+                                    <option value="terreno">Terreno</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="prop-ubicacion" class="form-label">Ubicación Preferida</label>
+                                <input type="text" class="form-control" id="prop-ubicacion" placeholder="Ciudad o zona">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="prop-presupuesto" class="form-label">Presupuesto (€)</label>
+                                <select id="prop-presupuesto" class="form-select">
+                                    <option value="" selected disabled>Seleccionar rango</option>
+                                    <option value="100k">Menos de 100.000€</option>
+                                    <option value="100-200k">100.000€ - 200.000€</option>
+                                    <option value="200-300k">200.000€ - 300.000€</option>
+                                    <option value="300k+">Más de 300.000€</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="prop-detalles" class="form-label">Detalles de tu Búsqueda *</label>
+                                <textarea class="form-control" id="prop-detalles" rows="5"
+                                    placeholder="Describe qué tipo de propiedad buscas, características importantes, fechas, etc."
+                                    required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="prop-notificaciones">
+                                    <label class="form-check-label" for="prop-notificaciones">
+                                        Deseo recibir notificaciones de propiedades similares.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="prop-politica" required>
+                                    <label class="form-check-label" for="prop-politica">
+                                        Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos
+                                        personales.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fa-solid fa-magnifying-glass me-2"></i> Buscar Propiedades
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Pestaña 3: Publicar Propiedad -->
+                    <div class="tab-pane fade" id="publicar-tab-pane" role="tabpanel" aria-labelledby="publicar-tab"
+                        tabindex="0">
+                        <form action="#" method="POST" class="row g-3">
+                            <div class="col-md-6">
+                                <label for="pub-name" class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-control" id="pub-name" placeholder="Tu nombre completo"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="pub-email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="pub-email" placeholder="tu@email.com"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="pub-phone" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="pub-phone" placeholder="+34 600 000 000">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="pub-tipo-usuario" class="form-label">Tipo de Usuario *</label>
+                                <select id="pub-tipo-usuario" class="form-select" required>
+                                    <option value="" selected disabled>Seleccionar tipo</option>
+                                    <option value="particular">Particular</option>
+                                    <option value="agencia">Agencia Inmobiliaria</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="pub-tipo-prop" class="form-label">Tipo de Propiedad *</label>
+                                <select id="pub-tipo-prop" class="form-select" required>
+                                    <option value="" selected disabled>Seleccionar tipo</option>
+                                    <option value="apartamento">Apartamento</option>
+                                    <option value="casa">Casa / Chalet</option>
+                                    <option value="local">Local Comercial</option>
+                                    <option value="terreno">Terreno</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="pub-operacion" class="form-label">Operación *</label>
+                                <select id="pub-operacion" class="form-select" required>
+                                    <option value="" selected disabled>Seleccionar operación</option>
+                                    <option value="venta">Venta</option>
+                                    <option value="alquiler">Alquiler</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="pub-ubicacion" class="form-label">Ubicación de la Propiedad *</label>
+                                <input type="text" class="form-control" id="pub-ubicacion"
+                                    placeholder="Dirección completa o zona" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="pub-adicional" class="form-label">Información Adicional</label>
+                                <textarea class="form-control" id="pub-adicional" rows="4"
+                                    placeholder="Describe tu propiedad, características especiales, urgencia de venta, etc."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label for="pub-documentos" class="form-label">Documentos (Opcional)</label>
+                                <input class="form-control" type="file" id="pub-documentos" multiple>
+                                <div class="form-text">Formatos permitidos: PDF, JPG, PNG. Máximo 5MB por archivo.</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="pub-politica" required>
+                                    <label class="form-check-label" for="pub-politica">
+                                        Acepto los <a href="#">términos de servicio</a> y la <a href="#">política de
+                                            privacidad</a>.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fa-solid fa-plus me-2"></i> Solicitar Información de Publicación
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Pestaña 4: Colaboraciones -->
+                    <div class="tab-pane fade" id="colab-tab-pane" role="tabpanel" aria-labelledby="colab-tab"
+                        tabindex="0">
+                        <form action="#" method="POST" class="row g-3">
+                            <div class="col-md-6">
+                                <label for="colab-name" class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-control" id="colab-name" placeholder="Tu nombre completo"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="colab-email" class="form-label">Email Corporativo *</label>
+                                <input type="email" class="form-control" id="colab-email" placeholder="tu@empresa.com"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="colab-empresa" class="form-label">Empresa *</label>
+                                <input type="text" class="form-control" id="colab-empresa"
+                                    placeholder="Nombre de tu empresa" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="colab-cargo" class="form-label">Cargo</label>
+                                <input type="text" class="form-control" id="colab-cargo"
+                                    placeholder="Tu posición en la empresa">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="colab-phone" class="form-label">Teléfono *</label>
+                                <input type="tel" class="form-control" id="colab-phone" placeholder="+34 600 000 000"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="colab-tipo" class="form-label">Tipo de Colaboración *</label>
+                                <select id="colab-tipo" class="form-select" required>
+                                    <option value="" selected disabled>Seleccionar tipo</option>
+                                    <option value="agencia">Agencia Inmobiliaria</option>
+                                    <option value="media">Medio de Prensa</option>
+                                    <option value="partnership">Partnership / Alianza</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="colab-web" class="form-label">Sitio Web</label>
+                                <input type="url" class="form-control" id="colab-web"
+                                    placeholder="https://tuempresa.com">
+                            </div>
+                            <div class="col-12">
+                                <label for="colab-propuesta" class="form-label">Propuesta de Colaboración *</label>
+                                <textarea class="form-control" id="colab-propuesta" rows="5"
+                                    placeholder="Describe tu propuesta de colaboración, servicios que ofreces, beneficios mutuos, etc."
+                                    required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label for="colab-documentos" class="form-label">Documentos Corporativos
+                                    (Opcional)</label>
+                                <input class="form-control" type="file" id="colab-documentos" multiple>
+                                <div class="form-text">Presentación comercial, certificaciones, etc. Máximo 10MB por
+                                    archivo.</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="colab-politica" required>
+                                    <label class="form-check-label" for="colab-politica">
+                                        Acepto la <a href="#">política de privacidad</a> y el tratamiento de datos
+                                        corporativos.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fa-solid fa-handshake me-2"></i> Enviar Propuesta
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!--               SECCIÓN 3: FAQ (ACORDEÓN)            -->
+    <!-- ================================================== -->
+    <section class="container my-5 py-5">
+        <!-- Título -->
+        <div class="row mb-5">
+            <div class="col-md-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold">Preguntas Frecuentes</h2>
+                <p class="lead text-muted">Encuentra respuestas rápidas a las consultas más comunes.</p>
+            </div>
+        </div>
+
+        <!-- Acordeón -->
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="accordion accordion-flush faq-accordion" id="faqAccordion">
+
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                ¿Cuánto tiempo tarda en responder a una consulta?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Nos comprometemos a responder todas las consultas en un máximo de 24 horas durante días
+                                laborables. Para consultas urgentes, puedes llamarnos directamente y recibirás atención
+                                inmediata.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                ¿Es gratuito publicar una propiedad?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Ofrecemos diferentes planes de publicación. Los propietarios individuales pueden
+                                publicar su primera propiedad de forma gratuita. Para agencias y múltiples propiedades,
+                                tenemos planes premium con funcionalidades adicionales.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                ¿Verifican todas las propiedades publicadas?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, todas las propiedades pasan por un proceso de verificación que incluye documentación
+                                legal, fotografías reales y confirmación de datos. Esto garantiza la calidad y veracidad
+                                de nuestros anuncios.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                ¿Puedo programar una visita online?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutamente. Ofrecemos visitas virtuales en vivo, tours 360° y la posibilidad de
+                                programar videollamadas con nuestros agentes para que puedas conocer la propiedad desde
+                                cualquier lugar.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================== -->
+    <!--                      FOOTER                        -->
+    <!-- ================================================== -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center">
+            <div class="row">
+                <!-- Columna de Redes Sociales -->
+                <div class="col-12 mb-4">
+                    <h5>Síguenos en Redes</h5>
+                    <div class="d-flex justify-content-center flex-wrap gap-3 social-icons-container">
+                        <!-- Facebook -->
+                        <a href="#" class="social-icon-wrapper">
+                            <div class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <span class="social-text">Facebook</span>
+                        </a>
+                        <!-- Twitter -->
+                        <a href="#" class="social-icon-wrapper">
+                            <div class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <span class="social-text">Twitter</span>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" class="social-icon-wrapper">
+                            <div class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <span class="social-text">Instagram</span>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="#" class="social-icon-wrapper">
+                            <div class="social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <span class="social-text">YouTube</span>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a href="#" class="social-icon-wrapper whatsapp">
+                            <div class="social-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <span class="social-text">WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="col-12 mt-3">
+                    <p class="text-white-50 mb-0">&copy; 2025 PropiedadesZone. Todos los derechos reservados.</p>
+                    <p class="text-white-50 small">Diseñado para ser tu hogar ideal.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

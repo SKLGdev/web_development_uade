@@ -1,0 +1,36 @@
+/* ----------------------------------------------------------------
+   ESTILOS ESPECÍFICOS: "nosotros.html"
+------------------------------------------------------------------- */
+
+.value-card {
+    border: 1px solid #e5e7eb;
+    border-radius: var(--bs-border-radius-lg, 0.75rem);
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.value-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--bs-primary-subtle, #FEF3C7);
+    color: var(--bs-primary, #D97706);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.75rem;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.2);
+}
