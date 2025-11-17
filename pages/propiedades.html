@@ -86,28 +86,28 @@
         <!-- ================================================== -->
         <section class="container-fluid property-search-header py-4 bg-white shadow-sm">
             <div class="container">
-                <form class="row g-3 align-items-center">
+                <form class="row g-3 align-items-center property-search-form">
                     <div class="col-xl-3 col-lg-6">
                         <label for="searchUbicacion" class="visually-hidden">Ubicación</label>
-                        <input type="text" class="form-control form-control-lg" id="searchUbicacion"
+                        <input type="text" class="form-control form-control-lg" id="searchUbicacion" name="ubicacion"
                             placeholder="Ciudad, Barrio o Zona">
                     </div>
                     <div class="col-xl-3 col-lg-6">
                         <label for="searchTipoProp" class="visually-hidden">Tipo de Propiedad</label>
-                        <select class="form-select form-select-lg" id="searchTipoProp">
+                        <select class="form-select form-select-lg" id="searchTipoProp" name="tipo">
                             <option selected disabled value="">Tipo de Propiedad</option>
-                            <option value="1">Apartamento</option>
-                            <option value="2">Casa</option>
-                            <option value="3">Local Comercial</option>
-                            <option value="4">Terreno</option>
+                            <option value="Departamento">Apartamento</option>
+                            <option value="Casa">Casa</option>
+                            <option value="Local Comercial">Local Comercial</option>
+                            <option value="Terreno">Terreno</option>
                         </select>
                     </div>
                     <div class="col-xl-3 col-lg-6">
                         <label for="searchOperacion" class="visually-hidden">Operación</label>
-                        <select class="form-select form-select-lg" id="searchOperacion">
+                        <select class="form-select form-select-lg" id="searchOperacion" name="operacion">
                             <option selected disabled value="">Operación</option>
-                            <option value="1">Comprar</option>
-                            <option value="2">Alquilar</option>
+                            <option value="Comprar">Comprar</option>
+                            <option value="Alquilar">Alquilar</option>
                         </select>
                     </div>
                     <div class="col-xl-3 col-lg-6 d-grid">
@@ -132,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div id="propiedades-list" class="row g-4">
                 <!-- Tarjeta 1 -->
                 <article class="col-lg-4 col-md-6">
                     <div class="card property-grid-card h-100">
@@ -265,7 +265,7 @@
             <!--                      PAGINACIÓN                    -->
             <!-- ================================================== -->
             <nav aria-label="Navegación de propiedades" class="mt-5 pt-4">
-                <ul class="pagination justify-content-center">
+                <ul id="pagination" class="pagination justify-content-center">
                     <li class="page-item disabled">
                         <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
                     </li>
@@ -343,6 +343,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- Scripts globales -->
+    <script src="../js/constants.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/main.js"></script>
+
+    <!-- Script específico de esta página -->
+    <script src="../js/pages/propiedades.js"></script>
+
+    
 </body>
 
 </html>

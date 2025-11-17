@@ -1,18 +1,19 @@
 :root {
-    --bs-primary: #D97706;
+    --bs-primary: #d97706;
     --bs-primary-rgb: 217, 119, 6;
-    --bs-primary-subtle: #FEF3C7;
-    --bs-body-bg: #F9FAFB;
+    --bs-primary-subtle: #fef3c7;
+    --bs-body-bg: #f9fafb;
     --bs-body-color: #374151;
-    --bs-link-color: #D97706;
-    --bs-link-hover-color: #B45309;
+    --bs-link-color: #d97706;
+    --bs-link-hover-color: #b45309;
     --bs-border-radius: 0.5rem;
     --bs-border-radius-lg: 0.75rem;
     --bs-border-radius-sm: 0.25rem;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
     background-color: var(--bs-body-bg);
 }
 
@@ -21,10 +22,10 @@ body {
     --bs-btn-bg: var(--bs-primary);
     --bs-btn-border-color: var(--bs-primary);
     --bs-btn-hover-color: #ffffff;
-    --bs-btn-hover-bg: #B45309;
-    --bs-btn-hover-border-color: #92400E;
-    --bs-btn-active-bg: #92400E;
-    --bs-btn-active-border-color: #78350F;
+    --bs-btn-hover-bg: #b45309;
+    --bs-btn-hover-border-color: #92400e;
+    --bs-btn-active-bg: #92400e;
+    --bs-btn-active-border-color: #78350f;
     --bs-btn-disabled-bg: var(--bs-primary);
     font-weight: 500;
     transition: all 0.2s ease-in-out;
@@ -39,7 +40,7 @@ body {
 }
 
 .navbar {
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .navbar-brand {
@@ -49,7 +50,7 @@ body {
 
 .navbar .nav-link {
     font-weight: 500;
-    color: #4B5563;
+    color: #4b5563;
     transition: color 0.2s;
 }
 
@@ -63,7 +64,7 @@ body {
 }
 
 .dropdown-menu {
-    border: 1px solid #E5E7EB;
+    border: 1px solid #e5e7eb;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -90,7 +91,7 @@ body {
 }
 
 .testimonial-stars {
-    color: #F59E0B;
+    color: #f59e0b;
     margin-bottom: 1rem;
 }
 
@@ -130,7 +131,7 @@ body {
 .social-icon-wrapper {
     display: flex;
     align-items: center;
-    background-color: #4B5563;
+    background-color: #4b5563;
     border-radius: 50px;
     padding: 0.5rem;
     text-decoration: none;
@@ -170,5 +171,44 @@ body {
 }
 
 .social-icon-wrapper.whatsapp:hover {
-    background-color: #25D366;
+    background-color: #25d366;
+}
+
+/* Buscando que sea dinamica  */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: #0b79d0;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    font-size: 1.2rem;
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+nav a.active {
+    border-bottom: 2px solid #0b79d0;
+}
+
+.error-msg {
+    color: #d00;
+    font-size: 0.8rem;
+}
+
+.input-error {
+    border-color: #d00;
+}
+
+.btn-fav.is-fav {
+    color: #e0245e;
 }

@@ -84,3 +84,10 @@
     background-color: #fff;
     border-color: #dee2e6;
 }
+
+
+/* boton scroll */
+.btn-fav.is-fav {
+    color: #e0245e;
+}
+
