@@ -30,3 +30,36 @@
     transform: scale(1.1);
     box-shadow: 0 4px 15px rgba(217, 119, 6, 0.2);
 }
+
+/* Imágenes responsive en página nosotros */
+.nosotros-section img,
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--bs-border-radius-lg, 0.75rem);
+}
+
+@media (max-width: 768px) {
+    .value-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .value-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .value-card {
+        padding: 1.25rem 0.75rem;
+    }
+    
+    .value-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+}
