@@ -17,9 +17,62 @@
 }
 
 .hero-carousel-image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    height: 100vh;
-    min-height: 600px;
+    object-position: center;
+}
+
+/* Responsive para carrusel hero */
+@media (max-width: 992px) {
+    .hero-section {
+        min-height: 70vh;
+    }
+    
+    .hero-carousel-image {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+    }
+    
+    .hero-carousel-image {
+        min-height: 400px;
+    }
+    
+    .hero-content {
+        padding: 1.5rem 0;
+    }
+    
+    .hero-content .display-4 {
+        font-size: 2rem;
+    }
+    
+    .hero-content .lead {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 50vh;
+    }
+    
+    .hero-carousel-image {
+        min-height: 300px;
+    }
+    
+    .hero-content .display-4 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-content .btn-lg {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
 }
 
 .hero-overlay {
@@ -65,6 +118,30 @@
 
 .property-card-featured .card-img-top-wrapper {
     position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.property-card-featured .card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .property-card-featured .card-img-top-wrapper {
+        padding-top: 75%; /* 4:3 aspect ratio en móviles */
+    }
+}
+
+@media (max-width: 576px) {
+    .property-card-featured .card-img-top-wrapper {
+        padding-top: 100%; /* 1:1 aspect ratio en móviles pequeños */
+    }
 }
 
 .property-card-featured .property-tag {
@@ -91,6 +168,41 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--bs-primary, #D97706);
+}
+
+/* Responsive para cards destacadas */
+@media (max-width: 992px) {
+    .property-card-featured .property-price {
+        font-size: 1.25rem;
+    }
+    
+    .property-card-featured .card-body {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-card-featured .property-price {
+        font-size: 1.1rem;
+    }
+    
+    .property-card-featured .property-specs {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .property-card-featured .property-price {
+        font-size: 1rem;
+    }
+    
+    .property-card-featured .property-tag {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
 }
 
 .property-card-featured .property-location {

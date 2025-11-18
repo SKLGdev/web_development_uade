@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-t">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PropiedadesZone - Inicio</title>
 
@@ -28,56 +28,7 @@
     <!-- ================================================== -->
     <!--                      NAVBAR                        -->
     <!-- ================================================== -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="fa-solid fa-house-chimney text-primary"></i>
-                Propiedades<span class="text-primary">Zone</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/propiedades.html">Propiedades</a>
-                    </li>
-                    <!-- Filtro por Zona/Provincia -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Filtrar por Zona
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="pages/propiedades.html#zona-norte">Buenos Aires (Zona
-                                    Norte)</a></li>
-                            <li><a class="dropdown-item" href="pages/propiedades.html#zona-sur">Buenos Aires (Zona
-                                    Sur)</a></li>
-                            <li><a class="dropdown-item" href="pages/propiedades.html#costa">Costa Atlántica</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="pages/propiedades.html#cordoba">Córdoba</a></li>
-                            <li><a class="dropdown-item" href="pages/propiedades.html#patagonia">Patagonia</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/publicar.html">Publicar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div data-component="navbar"></div>
 
     <main>
         <!-- ================================================== -->
@@ -162,73 +113,8 @@
             </div>
 
             <!-- Grilla de Propiedades -->
-            <div class="row g-4">
-                <!-- Tarjeta 1: Casa Moderna en Nordelta -->
-                <article class="col-lg-4 col-md-6">
-                    <div class="card property-card-featured h-100">
-                        <div class="card-img-top-wrapper">
-                            <span class="property-tag premium">Premium</span>
-                            <img src="./img/departamento_moderno.jpg"
-                                class="card-img-top" alt="Departamento moderno">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold">Departamento moderno</h5>
-                            <span class="property-location">Buenos Aires, Argentina</span>
-                            <span class="property-price mt-2">USD 550,000</span>
-                            <div class="property-specs">
-                                <span><i class="fa-solid fa-bed"></i> 4 habs</span>
-                                <span><i class="fa-solid fa-bath"></i> 3 baños</span>
-                                <span><i class="fa-solid fa-ruler-combined"></i> 280 m²</span>
-                            </div>
-                            <a href="pages/propiedades.html#propiedad-1" class="btn btn-outline-primary mt-auto">Ver
-                                Detalles</a>
-                        </div>
-                    </div>
-                </article>
-                <!-- Tarjeta 2: Departamento 2 Ambientes en Palermo -->
-                <article class="col-lg-4 col-md-6">
-                    <div class="card property-card-featured h-100">
-                        <div class="card-img-top-wrapper">
-                            <span class="property-tag">Oportunidad</span>
-                            <img src="./img/edificio_departamentos.jpg"
-                                class="card-img-top" alt="Edificio de departamentos">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold">Edificio de departamentos</h5>
-                            <span class="property-location">CABA, Argentina</span>
-                            <span class="property-price mt-2">USD 120,000</span>
-                            <div class="property-specs">
-                                <span><i class="fa-solid fa-bed"></i> 2 habs</span>
-                                <span><i class="fa-solid fa-bath"></i> 1 baño</span>
-                                <span><i class="fa-solid fa-ruler-combined"></i> 55 m²</span>
-                            </div>
-                            <a href="pages/propiedades.html#propiedad-2" class="btn btn-outline-primary mt-auto">Ver
-                                Detalles</a>
-                        </div>
-                    </div>
-                </article>
-                <!-- Tarjeta 3: Chalet en Mar del Plata -->
-                <article class="col-lg-4 col-md-6">
-                    <div class="card property-card-featured h-100">
-                        <div class="card-img-top-wrapper">
-                            <span class="property-tag">Vendido</span>
-                            <img src="./img/casa_playa.jpg"
-                                class="card-img-top" alt="Casa en la playa">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold">Casa en la playa</h5>
-                            <span class="property-location">Buenos Aires, Argentina</span>
-                            <span class="property-price mt-2">USD 210,000</span>
-                            <div class="property-specs">
-                                <span><i class="fa-solid fa-bed"></i> 5 habs</span>
-                                <span><i class="fa-solid fa-bath"></i> 3 baños</span>
-                                <span><i class="fa-solid fa-ruler-combined"></i> 190 m²</span>
-                            </div>
-                            <a href="pages/propiedades.html#propiedad-3" class="btn btn-outline-primary mt-auto">Ver
-                                Detalles</a>
-                        </div>
-                    </div>
-                </article>
+            <div id="destacadas" class="row g-4">
+                <!-- Se genera dinámicamente con JavaScript -->
             </div>
 
             <!-- Botón Ver Todas -->
@@ -253,47 +139,8 @@
                     </div>
                 </div>
                 <!-- Grilla de Características -->
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card value-card h-100">
-                            <div class="value-icon-wrapper">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <h5 class="fw-bold">Verificado</h5>
-                            <p class="text-muted">Todas las propiedades son verificadas por nuestros expertos para tu
-                                seguridad.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card value-card h-100">
-                            <div class="value-icon-wrapper">
-                                <i class="fa-solid fa-clock"></i>
-                            </div>
-                            <h5 class="fw-bold">Rápido</h5>
-                            <p class="text-muted">Respuesta en menos de 24 horas garantizada para todas tus consultas.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card value-card h-100">
-                            <div class="value-icon-wrapper">
-                                <i class="fa-solid fa-user-tie"></i>
-                            </div>
-                            <h5 class="fw-bold">Expertos</h5>
-                            <p class="text-muted">Equipo de profesionales certificados y con amplia experiencia en el
-                                sector.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card value-card h-100">
-                            <div class="value-icon-wrapper">
-                                <i class="fa-solid fa-hand-holding-dollar"></i>
-                            </div>
-                            <h5 class="fw-bold">Seguro</h5>
-                            <p class="text-muted">Transacciones 100% seguras y protegidas con los más altos estándares.
-                            </p>
-                        </div>
-                    </div>
+                <div class="row g-4" data-component="features">
+                    <!-- Se genera dinámicamente con JavaScript -->
                 </div>
             </div>
         </section>
@@ -313,79 +160,8 @@
             </div>
 
             <!-- Grilla de Testimonios -->
-            <div class="row g-4">
-                <!-- Testimonio 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card testimonial-card">
-                        <div class="card-body">
-                            <div class="testimonial-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="fst-italic text-muted">"Encontré mi apartamento ideal en Madrid en menos de una
-                                semana. El proceso fue muy fácil y el equipo me ayudó en cada paso."</p>
-                            <div class="testimonial-author">
-                                <img src="https://placehold.co/100x100/EAEAEA/333333?text=M.G."
-                                    alt="Cliente Maria Gonzalez">
-                                <div>
-                                    <h6>Maria Gonzalez</h6>
-                                    <span>Compradora en Madrid</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonio 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card testimonial-card">
-                        <div class="card-body">
-                            <div class="testimonial-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="fst-italic text-muted">"Vendí mi casa en Barcelona en tiempo récord. El equipo es
-                                súper profesional y el soporte al cliente excepcional."</p>
-                            <div class="testimonial-author">
-                                <img src="https://placehold.co/100x100/D4D4D4/333333?text=C.R."
-                                    alt="Cliente Carlos Ruiz">
-                                <div>
-                                    <h6>Carlos Ruiz</h6>
-                                    <span>Vendedor en Barcelona</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonio 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card testimonial-card">
-                        <div class="card-body">
-                            <div class="testimonial-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <p class="fst-italic text-muted">"Como agente inmobiliaria, PropiedadesZone me ha dado las
-                                herramientas para gestionar mis propiedades de manera eficiente."</p>
-                            <div class="testimonial-author">
-                                <img src="https://placehold.co/100x100/C0C0C0/333333?text=A.M."
-                                    alt="Cliente Ana Martín">
-                                <div>
-                                    <h6>Ana Martín</h6>
-                                    <span>Agente Inmobiliaria</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row g-4" data-component="testimonios">
+                <!-- Se genera dinámicamente con JavaScript -->
             </div>
         </section>
 
@@ -394,64 +170,30 @@
     <!-- ================================================== -->
     <!--                      FOOTER                        -->
     <!-- ================================================== -->
-    <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container text-center">
-            <div class="row">
-                <!-- Columna de Redes Sociales -->
-                <div class="col-12 mb-4">
-                    <h5>Síguenos en Redes</h5>
-                    <div class="d-flex justify-content-center flex-wrap gap-3 social-icons-container">
-                        <!-- Facebook -->
-                        <a href="#" class="social-icon-wrapper">
-                            <div class="social-icon">
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                            <span class="social-text">Facebook</span>
-                        </a>
-                        <!-- Twitter -->
-                        <a href="#" class="social-icon-wrapper">
-                            <div class="social-icon">
-                                <i class="fab fa-twitter"></i>
-                            </div>
-                            <span class="social-text">Twitter</span>
-                        </a>
-                        <!-- Instagram -->
-                        <a href="#" class="social-icon-wrapper">
-                            <div class="social-icon">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                            <span class="social-text">Instagram</span>
-                        </a>
-                        <!-- YouTube -->
-                        <a href="#" class="social-icon-wrapper">
-                            <div class="social-icon">
-                                <i class="fab fa-youtube"></i>
-                            </div>
-                            <span class="social-text">YouTube</span>
-                        </a>
-                        <!-- WhatsApp -->
-                        <a href="#" class="social-icon-wrapper whatsapp">
-                            <div class="social-icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <span class="social-text">WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
+    <div data-component="footer"></div>
 
-                <!-- Copyright -->
-                <div class="col-12 mt-3">
-                    <p class="text-white-50 mb-0">&copy; 2025 PropiedadesZone. Todos los derechos reservados.</p>
-                    <p class="text-white-50 small">Diseñado para ser tu hogar ideal.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- ================================================== -->
+    <!--              BOTÓN SCROLL TO TOP                    -->
+    <!-- ================================================== -->
+    <button class="scroll-top-btn" aria-label="Ir al inicio de la página" title="Ir arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- Scripts globales -->
+    <script src="./js/constants.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/components.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/pages/contacto.js"></script>
+
+    <!-- Script específico de esta página -->
+    <script src="./js/pages/index.js"></script>
+
 </body>
 
 </html>

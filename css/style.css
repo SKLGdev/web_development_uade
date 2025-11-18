@@ -1,18 +1,19 @@
 :root {
-    --bs-primary: #D97706;
+    --bs-primary: #d97706;
     --bs-primary-rgb: 217, 119, 6;
-    --bs-primary-subtle: #FEF3C7;
-    --bs-body-bg: #F9FAFB;
+    --bs-primary-subtle: #fef3c7;
+    --bs-body-bg: #f9fafb;
     --bs-body-color: #374151;
-    --bs-link-color: #D97706;
-    --bs-link-hover-color: #B45309;
+    --bs-link-color: #d97706;
+    --bs-link-hover-color: #b45309;
     --bs-border-radius: 0.5rem;
     --bs-border-radius-lg: 0.75rem;
     --bs-border-radius-sm: 0.25rem;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
     background-color: var(--bs-body-bg);
 }
 
@@ -21,10 +22,10 @@ body {
     --bs-btn-bg: var(--bs-primary);
     --bs-btn-border-color: var(--bs-primary);
     --bs-btn-hover-color: #ffffff;
-    --bs-btn-hover-bg: #B45309;
-    --bs-btn-hover-border-color: #92400E;
-    --bs-btn-active-bg: #92400E;
-    --bs-btn-active-border-color: #78350F;
+    --bs-btn-hover-bg: #b45309;
+    --bs-btn-hover-border-color: #92400e;
+    --bs-btn-active-bg: #92400e;
+    --bs-btn-active-border-color: #78350f;
     --bs-btn-disabled-bg: var(--bs-primary);
     font-weight: 500;
     transition: all 0.2s ease-in-out;
@@ -39,7 +40,7 @@ body {
 }
 
 .navbar {
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .navbar-brand {
@@ -49,7 +50,7 @@ body {
 
 .navbar .nav-link {
     font-weight: 500;
-    color: #4B5563;
+    color: #4b5563;
     transition: color 0.2s;
 }
 
@@ -63,7 +64,7 @@ body {
 }
 
 .dropdown-menu {
-    border: 1px solid #E5E7EB;
+    border: 1px solid #e5e7eb;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -90,7 +91,7 @@ body {
 }
 
 .testimonial-stars {
-    color: #F59E0B;
+    color: #f59e0b;
     margin-bottom: 1rem;
 }
 
@@ -105,6 +106,16 @@ body {
     height: 50px;
     border-radius: 50%;
     margin-right: 1rem;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+@media (max-width: 576px) {
+    .testimonial-author img {
+        width: 40px;
+        height: 40px;
+        margin-right: 0.75rem;
+    }
 }
 
 .testimonial-author h6 {
@@ -130,7 +141,7 @@ body {
 .social-icon-wrapper {
     display: flex;
     align-items: center;
-    background-color: #4B5563;
+    background-color: #4b5563;
     border-radius: 50px;
     padding: 0.5rem;
     text-decoration: none;
@@ -170,5 +181,174 @@ body {
 }
 
 .social-icon-wrapper.whatsapp:hover {
-    background-color: #25D366;
+    background-color: #25d366;
+}
+
+/* ================================================== */
+/*           BOTÓN SCROLL TO TOP                     */
+/* ================================================== */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: var(--bs-primary, #d97706);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+    z-index: 1000;
+}
+
+.scroll-top-btn:hover {
+    background: var(--bs-btn-hover-bg, #b45309);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(217, 119, 6, 0.4);
+}
+
+.scroll-top-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3);
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Responsive para el botón */
+@media (max-width: 768px) {
+    .scroll-top-btn {
+        bottom: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .scroll-top-btn {
+        bottom: 0.75rem;
+        right: 0.75rem;
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+nav a.active {
+    border-bottom: 2px solid #0b79d0;
+}
+
+.error-msg {
+    color: #d00;
+    font-size: 0.8rem;
+}
+
+.input-error {
+    border-color: #d00;
+}
+
+.btn-fav.is-fav {
+    color: #e0245e;
+}
+
+/* ================================================== */
+/*           IMÁGENES RESPONSIVE                    */
+/* ================================================== */
+
+/* Reglas generales para todas las imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Imágenes en cards de propiedades */
+.property-card img,
+.property-card-featured img,
+.property-grid-card img,
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Fallback para navegadores antiguos */
+    min-height: 200px;
+    /* Moderno: aspect-ratio */
+    aspect-ratio: 16 / 9;
+}
+
+/* Nota: El fallback para aspect-ratio se maneja en cada componente específico */
+
+/* Contenedor para imágenes en property-card (generadas dinámicamente) */
+.property-card {
+    overflow: hidden;
+    border-radius: var(--bs-border-radius-lg, 0.75rem);
+}
+
+.property-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    display: block;
+}
+
+/* Ajuste para diferentes resoluciones */
+@media (max-width: 992px) {
+    .property-card img,
+    .property-card-featured img,
+    .property-grid-card img,
+    .card-img-top {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-card img,
+    .property-card-featured img,
+    .property-grid-card img,
+    .card-img-top {
+        aspect-ratio: 4 / 3;
+    }
+    
+    .property-card-featured .card-body {
+        padding: 1rem;
+    }
+    
+    .property-card-featured .property-price {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .property-card img,
+    .property-card-featured img,
+    .property-grid-card img,
+    .card-img-top {
+        aspect-ratio: 1 / 1;
+    }
+    
+    .property-card-featured .property-specs {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+    }
+    
+    .property-grid-card .card-body {
+        padding: 1rem;
+    }
+    
+    .property-grid-card .card-body .card-title {
+        font-size: 1.1rem;
+    }
 }
