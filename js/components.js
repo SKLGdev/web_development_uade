@@ -23,11 +23,11 @@ const ZONAS_DROPDOWN = [
 
 // Configuración de redes sociales
 const SOCIAL_LINKS = [
-    { icon: "fab fa-facebook-f", text: "Facebook", class: "" },
-    { icon: "fab fa-twitter", text: "Twitter", class: "" },
-    { icon: "fab fa-instagram", text: "Instagram", class: "" },
-    { icon: "fab fa-youtube", text: "YouTube", class: "" },
-    { icon: "fab fa-whatsapp", text: "WhatsApp", class: "whatsapp" }
+    { icon: "fab fa-facebook-f", text: "Facebook", class: "", href: "https://www.facebook.com/" },
+    { icon: "fab fa-x-twitter", text: "X", class: "", href: "https://twitter.com/" },
+    { icon: "fab fa-instagram", text: "Instagram", class: "", href: "https://www.instagram.com/" },
+    { icon: "fab fa-youtube", text: "YouTube", class: "", href: "https://www.youtube.com/" },
+    { icon: "fab fa-whatsapp", text: "WhatsApp", class: "whatsapp", href: "https://www.whatsapp.com/" }
 ];
 
 // Testimonios
@@ -161,7 +161,7 @@ function renderNavbar(activePage = '') {
 function renderFooter() {
     const basePath = getBasePath();
     const socialIcons = SOCIAL_LINKS.map(social => `
-        <a href="#" class="social-icon-wrapper ${social.class}">
+        <a href="${social.href}" class="social-icon-wrapper ${social.class}" target="_blank" rel="noopener noreferrer">
             <div class="social-icon">
                 <i class="${social.icon}"></i>
             </div>
