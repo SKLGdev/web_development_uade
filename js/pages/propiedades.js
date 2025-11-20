@@ -1,21 +1,48 @@
-/* 
-° Leer filtros del formulario de busqueda
-° Filtra propiedades 
-° Renderizar cards dinamicamente
-° Implementa paginacion
-° Marcar favoritos con localStorage.
-*/
-
 let currentPage = 1;
 let currentFilters = {};
 
 document.addEventListener("DOMContentLoaded", () => {
     initComponents('propiedades');
+    loadFiltersFromStorage();
     initSearchForm();
     initPagination();
     initFavButtonsDelegate();
     renderPropiedades();
 });
+
+function loadFiltersFromStorage() {
+    const saved = getStorageItem("filtros_propiedades", {});
+    currentFilters = saved;
+    currentPage = saved.page || 1;
+    
+    const form = document.querySelector(".property-search-form");
+    if (form && Object.keys(saved).length > 0) {
+        if (saved.ubicacion) {
+            const ubicacionInput = form.querySelector('input[name="ubicacion"]');
+            if (ubicacionInput) ubicacionInput.value = saved.ubicacion;
+        }
+        if (saved.zona) {
+            const zonaSelect = form.querySelector('select[name="zona"]');
+            if (zonaSelect) zonaSelect.value = saved.zona;
+        }
+        if (saved.tipo) {
+            const tipoSelect = form.querySelector('select[name="tipo"]');
+            if (tipoSelect) tipoSelect.value = saved.tipo;
+        }
+        if (saved.operacion) {
+            const operacionSelect = form.querySelector('select[name="operacion"]');
+            if (operacionSelect) operacionSelect.value = saved.operacion;
+        }
+    }
+}
+
+function saveFiltersToStorage() {
+    const filtersToSave = {
+        ...currentFilters,
+        page: currentPage
+    };
+    setStorageItem("filtros_propiedades", filtersToSave);
+}
 
 function initSearchForm() {
     const form = document.querySelector(".property-search-form");
@@ -31,7 +58,24 @@ function initSearchForm() {
             operacion: fd.get("operacion") || "",
         };
         currentPage = 1;
+        saveFiltersToStorage();
         renderPropiedades();
+    });
+
+    const inputs = form.querySelectorAll('input, select');
+    inputs.forEach(input => {
+        input.addEventListener("change", () => {
+            const fd = new FormData(form);
+            currentFilters = {
+                ubicacion: fd.get("ubicacion") || "",
+                zona: fd.get("zona") || "",
+                tipo: fd.get("tipo") || "",
+                operacion: fd.get("operacion") || "",
+            };
+            currentPage = 1;
+            saveFiltersToStorage();
+            renderPropiedades();
+        });
     });
 }
 
@@ -131,24 +175,21 @@ function initPagination() {
         if (!link) return;
         e.preventDefault();
         currentPage = Number(link.dataset.page);
+        saveFiltersToStorage();
         renderPropiedades();
     });
 }
 
-// Favoritos con localStorage
 function getFavoritos() {
-    try {
-        return JSON.parse(localStorage.getItem("favoritos")) || [];
-    } catch {
-        return [];
-    }
+    return getStorageItem("favoritos", []);
 }
 
 function toggleFavorito(id) {
     const favs = getFavoritos();
     const exists = favs.includes(id);
     const updated = exists ? favs.filter((f) => f !== id) : [...favs, id];
-    localStorage.setItem("favoritos", JSON.stringify(updated));
+    setStorageItem("favoritos", updated);
+    return updated;
 }
 
 function initFavButtonsDelegate() {

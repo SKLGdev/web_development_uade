@@ -1,5 +1,3 @@
-// funciones auxiliares 
-
 function $(selector, parent = document) {
     return parent.querySelector(selector);
 }
@@ -8,12 +6,10 @@ function $all(selector, parent= document){
     return [...parent.querySelectorAll(selector)];
 }
 
-// Formateo
 function formatPriceUsd(value){
     return "USD " + Number(value).toLocaleString("es-AR");
 }
 
-// Validaciones
 function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -38,4 +34,32 @@ function clearError(input){
     const span = group.querySelector(".error-msg");
     if (span) span.remove();
     input.classList.remove("input-error");
+}
+
+function getStorageItem(key, defaultValue = null) {
+    try {
+        const item = localStorage.getItem(key);
+        return item ? JSON.parse(item) : defaultValue;
+    } catch (e) {
+        return defaultValue;
+    }
+}
+
+function setStorageItem(key, value) {
+    try {
+        localStorage.setItem(key, JSON.stringify(value));
+        return true;
+    } catch (e) {
+        console.warn(`Error saving to localStorage (${key}):`, e);
+        return false;
+    }
+}
+
+function removeStorageItem(key) {
+    try {
+        localStorage.removeItem(key);
+        return true;
+    } catch (e) {
+        return false;
+    }
 }

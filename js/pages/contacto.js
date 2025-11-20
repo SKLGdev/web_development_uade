@@ -1,11 +1,3 @@
-/* 
-Manejo de formularios de contacto:
-° Validar campos requeridos
-° Validar emails
-° Mostrar mensajes de error/success
-° Prevenir envío si hay errores
-*/
-
 document.addEventListener("DOMContentLoaded", () => {
     initComponents('contacto');
     initContactForms();
@@ -14,15 +6,47 @@ document.addEventListener("DOMContentLoaded", () => {
 function initContactForms() {
     const forms = document.querySelectorAll("form");
     forms.forEach(form => {
+        loadFormData(form);
         form.addEventListener("submit", handleFormSubmit);
         
-        // Validación en tiempo real
         const inputs = form.querySelectorAll("input, textarea, select");
         inputs.forEach(input => {
-            input.addEventListener("blur", () => validateField(input));
-            input.addEventListener("input", () => clearError(input));
+            input.addEventListener("blur", () => {
+                validateField(input);
+                saveFormData(form);
+            });
+            input.addEventListener("input", () => {
+                clearError(input);
+                saveFormData(form);
+            });
         });
     });
+}
+
+function loadFormData(form) {
+    const formId = form.id || "contacto_form";
+    const saved = getStorageItem(`form_${formId}`, {});
+    
+    Object.keys(saved).forEach(key => {
+        const field = form.querySelector(`[name="${key}"]`);
+        if (field && !field.value) {
+            field.value = saved[key];
+        }
+    });
+}
+
+function saveFormData(form) {
+    const formId = form.id || "contacto_form";
+    const formData = new FormData(form);
+    const data = {};
+    
+    for (const [key, value] of formData.entries()) {
+        if (value.trim()) {
+            data[key] = value;
+        }
+    }
+    
+    setStorageItem(`form_${formId}`, data);
 }
 
 function handleFormSubmit(e) {
@@ -30,7 +54,20 @@ function handleFormSubmit(e) {
     const form = e.target;
     
     if (validateForm(form)) {
-        // Simular envío exitoso
+        const formData = new FormData(form);
+        const submission = {
+            timestamp: new Date().toISOString(),
+            data: Object.fromEntries(formData.entries())
+        };
+        
+        const submissions = getStorageItem("contacto_submissions", []);
+        submissions.push(submission);
+        if (submissions.length > 50) submissions.shift();
+        setStorageItem("contacto_submissions", submissions);
+        
+        const formId = form.id || "contacto_form";
+        removeStorageItem(`form_${formId}`);
+        
         showSuccessMessage(form);
         form.reset();
     } else {
@@ -76,7 +113,6 @@ function validateField(field) {
 }
 
 function showSuccessMessage(form) {
-    // Remover mensajes anteriores
     const existingAlert = form.querySelector(".alert");
     if (existingAlert) {
         existingAlert.remove();
@@ -89,7 +125,6 @@ function showSuccessMessage(form) {
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     `;
     
-    // Insertar antes del botón de submit
     const submitBtn = form.querySelector('button[type="submit"]');
     if (submitBtn) {
         submitBtn.parentElement.insertBefore(alert, submitBtn);
@@ -97,7 +132,6 @@ function showSuccessMessage(form) {
         form.appendChild(alert);
     }
     
-    // Auto-remover después de 5 segundos
     setTimeout(() => {
         if (alert.parentElement) {
             alert.remove();
@@ -106,7 +140,6 @@ function showSuccessMessage(form) {
 }
 
 function showErrorMessage(message) {
-    // Buscar el primer formulario visible
     const activeTab = document.querySelector(".tab-pane.active");
     if (activeTab) {
         const form = activeTab.querySelector("form");

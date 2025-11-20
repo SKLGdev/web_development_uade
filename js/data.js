@@ -1,6 +1,4 @@
-// Listado de propiedades 
-
-const PROPIEDADES = [
+const PROPIEDADES_INITIAL = [
     {
         id: 1,
         titulo: "Casa Moderna en Nordelta", 
@@ -338,3 +336,38 @@ const PROPIEDADES = [
         destacado: false
     }
 ];
+
+function loadPropertiesFromStorage() {
+    try {
+        const stored = localStorage.getItem("propiedades");
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                return parsed;
+            }
+        }
+    } catch (e) {
+        console.warn("Error loading properties from storage:", e);
+    }
+    return PROPIEDADES_INITIAL;
+}
+
+
+function initializeProperties() {
+    let props = loadPropertiesFromStorage();
+    
+    if (props.length < PROPIEDADES_INITIAL.length) {
+        const storedIds = new Set(props.map(p => p.id));
+        const missing = PROPIEDADES_INITIAL.filter(p => !storedIds.has(p.id));
+        props = [...props, ...missing];
+    }
+    
+    const hasStored = localStorage.getItem("propiedades");
+    if (!hasStored || props.length !== PROPIEDADES_INITIAL.length) {
+        setStorageItem("propiedades", props);
+    }
+    
+    return props;
+}
+
+const PROPIEDADES = initializeProperties();

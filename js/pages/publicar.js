@@ -1,12 +1,3 @@
-/* 
-Manejo de formulario de publicacion:
-° Validar campos requeridos
-° Validar precios numericos
-° Validar archivos (tamaño, tipo)
-° Simular guardado de la propiedad 
-° Mostrar mensaje de exito en la misma pagina
-*/
-
 document.addEventListener("DOMContentLoaded", () => {
     initComponents('publicar');
     initPublicationForm();
@@ -146,15 +137,7 @@ function createPropertyFromForm(form) {
 
 function addPropertyToData(property) {
     PROPIEDADES.push(property);
-    
-    // Guardar en localStorage para persistencia
-    try {
-        localStorage.setItem("propiedades", JSON.stringify(PROPIEDADES));
-    } catch (e) {
-        console.warn("No se pudo guardar en localStorage:", e);
-    }
-    
-    console.log("Propiedad agregada:", property);
+    setStorageItem("propiedades", PROPIEDADES);
 }
 
 function initFileUpload() {

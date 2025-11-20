@@ -1,9 +1,3 @@
-/*
-° Mostrar propiedades destacadas 
-° Llenar carrusel o cards dinamicamente a partir de propiedades
-° Inicializar componentes reutilizables
-*/
-
 document.addEventListener("DOMContentLoaded", () => {
     initComponents('inicio');
     renderDestacadas();
