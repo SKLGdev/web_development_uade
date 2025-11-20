@@ -6,6 +6,9 @@ Manejo de formularios de contacto:
 ° Prevenir envío si hay errores
 */
 
+const CONTACT_STORAGE_KEY = "pz_contact_submissions";
+const MAX_STORED_FORMS = 10;
+
 document.addEventListener("DOMContentLoaded", () => {
     initComponents('contacto');
     initContactForms();
@@ -30,7 +33,7 @@ function handleFormSubmit(e) {
     const form = e.target;
     
     if (validateForm(form)) {
-        // Simular envío exitoso
+        saveFormSubmission(form);
         showSuccessMessage(form);
         form.reset();
     } else {
@@ -137,5 +140,49 @@ function showErrorMessage(message) {
             }, 5000);
         }
     }
+}
+
+function saveFormSubmission(form) {
+    const submissions = getStoredSubmissions();
+    const sanitizedSubmissions = submissions.length >= MAX_STORED_FORMS ? [] : submissions;
+    sanitizedSubmissions.push(buildSubmissionPayload(form));
+    localStorage.setItem(CONTACT_STORAGE_KEY, JSON.stringify(sanitizedSubmissions));
+}
+
+function getStoredSubmissions() {
+    try {
+        const stored = localStorage.getItem(CONTACT_STORAGE_KEY);
+        return stored ? JSON.parse(stored) : [];
+    } catch (error) {
+        console.warn("No se pudo leer el historial de formularios:", error);
+        return [];
+    }
+}
+
+function buildSubmissionPayload(form) {
+    const fieldsData = {};
+    const elements = form.querySelectorAll("input, textarea, select");
+    
+    elements.forEach(field => {
+        const key = field.name || field.id || field.dataset.fieldKey;
+        if (!key) return;
+        
+        if (field.type === "checkbox") {
+            fieldsData[key] = field.checked;
+        } else if (field.type === "file") {
+            fieldsData[key] = Array.from(field.files || []).map(file => file.name);
+        } else if (field.tagName === "SELECT" && field.multiple) {
+            fieldsData[key] = Array.from(field.selectedOptions).map(option => option.value);
+        } else {
+            fieldsData[key] = field.value.trim();
+        }
+    });
+    
+    return {
+        id: crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(),
+        formType: form.dataset.formType || "desconocido",
+        submittedAt: new Date().toISOString(),
+        data: fieldsData
+    };
 }
 
