@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /* 
 Manejo de formularios de contacto:
 ° Validar campos requeridos
@@ -11,7 +9,6 @@ Manejo de formularios de contacto:
 const CONTACT_STORAGE_KEY = "pz_contact_submissions";
 const MAX_STORED_FORMS = 10;
 
->>>>>>> 858506c959f8b3cd1c55ae9d1d5acd9a944458da
 document.addEventListener("DOMContentLoaded", () => {
     initComponents('contacto');
     initContactForms();
@@ -68,24 +65,11 @@ function handleFormSubmit(e) {
     const form = e.target;
     
     if (validateForm(form)) {
-<<<<<<< HEAD
-        const formData = new FormData(form);
-        const submission = {
-            timestamp: new Date().toISOString(),
-            data: Object.fromEntries(formData.entries())
-        };
-        
-        const submissions = getStorageItem("contacto_submissions", []);
-        submissions.push(submission);
-        if (submissions.length > 50) submissions.shift();
-        setStorageItem("contacto_submissions", submissions);
+        saveFormSubmission(form);
         
         const formId = form.id || "contacto_form";
         removeStorageItem(`form_${formId}`);
         
-=======
-        saveFormSubmission(form);
->>>>>>> 858506c959f8b3cd1c55ae9d1d5acd9a944458da
         showSuccessMessage(form);
         form.reset();
     } else {
